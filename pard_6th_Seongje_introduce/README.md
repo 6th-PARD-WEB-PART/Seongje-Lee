@@ -6,6 +6,23 @@ Next.js + TypeScript 기반으로 **자기소개 페이지**를 제작했습니�
 
 ---
 
+# 실행 화면
+메인 페이지 
+
+<img src="./images/index.png" width="300"/>
+
+About 페이지
+
+<img src="./images/about.png" width="300"/>
+
+Goals 페이지
+
+<img src="./images/goals.png" width="300"/>
+
+Favorites 페이지
+
+<img src="./images/favorites.png" width="300"/>
+
 ## 🚀 실행 방법
 ```bash
 # 프로젝트 클론
@@ -14,14 +31,3 @@ cd pard_6th_seongje_introduce
 
 # 개발 서버 실행
 npm run 
-
-# 실행 화면
-메인 페이지 
-<img src="./images/index.png" width="300"/>
-About 페이지
-<img src="./images/about.png" width="300"/>
-Goals 페이지
-<img src="./images/goals.png" width="300"/>
-Favorites 페이지
-<img src="./images/favorites.png" width="300"/>
-
