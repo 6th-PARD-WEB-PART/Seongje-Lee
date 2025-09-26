@@ -13,4 +13,15 @@ git clone https://github.com/6th-PARD-WEB-PART/Seongje-Lee
 cd pard_6th_seongje_introduce
 
 # 개발 서버 실행
-npm run dev
+npm run 
+
+# 실행 화면
+메인 페이지 
+<img src="./images/index.png" width="300"/>
+About 페이지
+<img src="./images/about.png" width="300"/>
+Goals 페이지
+<img src="./images/goals.png" width="300"/>
+Favorites 페이지
+<img src="./images/favorites.png" width="300"/>
+
