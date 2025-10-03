@@ -8,11 +8,11 @@ TailWind 기반으로 **당근마켓 홈페이지**를 제작했습니다.
 # 실행 화면
 랜딩 페이지
 
-<img src="./images/HOME.png" width="300"/>
+<img src="./public/images/HOME.png" width="300"/>
 
 메인
 
-<img src="./images/MENU.png" width="300"/>
+<img src="./public/images/MENU.png" width="300"/>
 
 ## 🚀 실행 방법
 ```bash
