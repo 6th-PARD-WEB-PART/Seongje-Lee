@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-/*타입 별칭 + 유니온 (배운 범위) */
+/*타입 별칭 + 유니온*/
 type Nav =
   | { kind: "route"; href: string; title: string }
   | { kind: "external"; url: string; title: string };
 
-/*제네릭 함수 (아주 기본형) */
+/*제네릭 함수*/
 const titlesOf = <T extends { title: string }>(items: T[]): string[] =>
   items.map((i) => i.title);
 
@@ -17,7 +17,7 @@ const navs: Nav[] = [
   { kind: "external", url: "https://handong.edu", title: "HGU" },
 ];
 
-void titlesOf(navs); // 사용 예시(빌드 영향 없음)
+void titlesOf(navs);
 
 export default function Home() {
   return (

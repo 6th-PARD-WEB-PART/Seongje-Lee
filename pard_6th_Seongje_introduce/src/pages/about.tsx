@@ -12,8 +12,8 @@ interface Pard extends User {
 /*유틸리티 타입(Partial) – 일부만 채워 업데이트 */
 const updateUser = (u: User, patch: Partial<User>): User => ({ ...u, ...patch });
 
-const me: Pard = { name: "이성제", id: 22200525, age: 23, part: "web" };
-const olderMe = updateUser(me, { age: 24 });
+const me: Pard = { name: "이성제", id: 22200525, age: 22, part: "web" };
+const olderMe = updateUser(me, { age: 23 });
 
 /*함수 타입 + 화살표 함수 */
 type Line = (label: string, value: string | number) => JSX.Element;
