@@ -2,6 +2,8 @@
 
 ## ✨ 내용
 TailWind 기반으로 **당근마켓 홈페이지**를 제작했습니다.  
+# 2차
+모달 페이지를 추가하고, 유저들의 관심을 반영할 수 있도록 했습니다.
 
 ---
 
@@ -13,6 +15,10 @@ TailWind 기반으로 **당근마켓 홈페이지**를 제작했습니다.
 메인
 
 <img src="./public/images/MENU.png" width="300"/>
+
+모달
+
+<img src="./public/images/Modal_page.png" width="300"/>
 
 ## 🚀 실행 방법
 ```bash

@@ -1,4 +1,13 @@
+import Link from "next/link";
+import { useState } from "react";
+
 export default function Home() {
+  const [keyword, setKeyword] = useState("");
+
+  const handleSearch = () => {
+    console.log(`{http://localhost:3000/}에서 {${keyword}}을(를) 찾고 있어요!`);
+  };
+
   return (
     <div className="w-[1440px] mx-auto bg-gray-50 overflow-hidden">
       {/* ===== Header ===== */}
@@ -8,13 +17,30 @@ export default function Home() {
           <div className="flex items-center">
             <img src="/images/IMG-9.png" alt="로고" className="w-[61px] h-10" />
             <nav className="ml-8 h-6 flex items-center whitespace-nowrap">
-              <a className="text-gray-700 text-base font-medium leading-6">중고거래</a>
-              <span className="pl-6 text-gray-700 text-base font-medium leading-6">부동산</span>
-              <span className="pl-6 text-gray-700 text-base font-medium leading-6">중고차</span>
-              <span className="pl-6 text-gray-700 text-base font-medium leading-6">알바</span>
-              <span className="pl-6 text-gray-700 text-base font-medium leading-6">동네업체</span>
-              <span className="pl-6 text-gray-700 text-base font-medium leading-6">동네생활</span>
-              <span className="pl-6 text-gray-700 text-base font-medium leading-6">모임</span>
+              <Link
+                href="/menu"
+                className="text-gray-700 text-base font-medium leading-6 hover:text-orange-500 transition"
+              >
+                중고거래
+              </Link>
+              <span className="pl-6 text-gray-700 text-base font-medium leading-6">
+                부동산
+              </span>
+              <span className="pl-6 text-gray-700 text-base font-medium leading-6">
+                중고차
+              </span>
+              <span className="pl-6 text-gray-700 text-base font-medium leading-6">
+                알바
+              </span>
+              <span className="pl-6 text-gray-700 text-base font-medium leading-6">
+                동네업체
+              </span>
+              <span className="pl-6 text-gray-700 text-base font-medium leading-6">
+                동네생활
+              </span>
+              <span className="pl-6 text-gray-700 text-base font-medium leading-6">
+                모임
+              </span>
             </nav>
           </div>
 
@@ -22,7 +48,9 @@ export default function Home() {
           <div className="ml-auto flex items-center">
             <div className="h-6 flex items-center">
               <img src="/icons/Icon-35.svg" alt="" className="w-4 h-4" />
-              <span className="ml-2 text-gray-700 text-sm leading-5">송도동</span>
+              <span className="ml-2 text-gray-700 text-sm leading-5">
+                송도동
+              </span>
               <img src="/icons/Icon-40.svg" alt="" className="ml-2 w-4 h-4" />
             </div>
             <button className="ml-4 h-10 px-4 bg-orange-500 rounded-lg text-white text-base font-medium transition-colors hover:bg-orange-600 active:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-300">
@@ -70,6 +98,8 @@ export default function Home() {
               {/*검색 버튼 (호버 포함) */}
               <div className="relative w-[536.02px] h-12 ml-4">
                 <input
+                  value={keyword}
+                  onChange={(e) => setKeyword(e.target.value)}
                   className="w-full h-full rounded-lg border border-gray-200 pl-4 pr-12
                              text-gray-800 placeholder-gray-400 text-base font-medium
                              focus:outline-none focus:ring-2 focus:ring-orange-200"
@@ -84,6 +114,7 @@ export default function Home() {
                              transition-colors duration-200
                              hover:bg-orange-600 active:bg-orange-700
                              focus:outline-none focus:ring-2 focus:ring-orange-300"
+                  onClick={handleSearch}
                 >
                   <img
                     src="/icons/Icon-62.svg"
@@ -98,15 +129,33 @@ export default function Home() {
           {/* 인기 검색어 */}
           <div className="pt-6">
             <div className="w-[832px] h-5 px-4 flex items-center gap-2 flex-wrap">
-              <span className="text-gray-700 text-sm leading-tight">인기 검색어:</span>
-              <span className="text-orange-500 text-sm leading-tight">에어팟</span>
-              <span className="text-orange-500 text-sm leading-tight">에어팟3</span>
-              <span className="text-orange-500 text-sm leading-tight">노트북</span>
-              <span className="text-orange-500 text-sm leading-tight">원룸</span>
-              <span className="text-orange-500 text-sm leading-tight">현대 중고차</span>
-              <span className="text-orange-500 text-sm leading-tight">아침일감</span>
-              <span className="text-orange-500 text-sm leading-tight">급식당</span>
-              <span className="text-orange-500 text-sm leading-tight">배달</span>
+              <span className="text-gray-700 text-sm leading-tight">
+                인기 검색어:
+              </span>
+              <span className="text-orange-500 text-sm leading-tight">
+                에어팟
+              </span>
+              <span className="text-orange-500 text-sm leading-tight">
+                에어팟3
+              </span>
+              <span className="text-orange-500 text-sm leading-tight">
+                노트북
+              </span>
+              <span className="text-orange-500 text-sm leading-tight">
+                원룸
+              </span>
+              <span className="text-orange-500 text-sm leading-tight">
+                현대 중고차
+              </span>
+              <span className="text-orange-500 text-sm leading-tight">
+                아침일감
+              </span>
+              <span className="text-orange-500 text-sm leading-tight">
+                급식당
+              </span>
+              <span className="text-orange-500 text-sm leading-tight">
+                배달
+              </span>
             </div>
           </div>
         </div>
@@ -114,7 +163,15 @@ export default function Home() {
       <section className="w-[1152px] max-w-[1152px] mx-auto p-8">
         <div className="pb-12">
           <div className="w-[1088px] min-h-32 flex flex-wrap gap-4">
-            {["중고거래", "알바", "부동산", "중고차", "동네업체", "동네생활", "모임"].map((t, i) => (
+            {[
+              "중고거래",
+              "알바",
+              "부동산",
+              "중고차",
+              "동네업체",
+              "동네생활",
+              "모임",
+            ].map((t, i) => (
               <div
                 key={i}
                 className="w-36 h-32 p-6 bg-white rounded-2xl flex flex-col items-center justify-start"
