@@ -4,6 +4,8 @@
 TailWind 기반으로 **당근마켓 홈페이지**를 제작했습니다.  
 # 2차
 모달 페이지를 추가하고, 유저들의 관심을 반영할 수 있도록 했습니다.
+# 3차
+반응형 레이아웃 구현!
 
 ---
 
@@ -19,6 +21,14 @@ TailWind 기반으로 **당근마켓 홈페이지**를 제작했습니다.
 모달
 
 <img src="./public/images/Modal_page.png" width="300"/>
+
+모바일
+
+<img src="./public/images/Mobile.png" width="300"/>
+
+테블릿
+
+<img src="./public/images/Tablet.png" width="300"/>
 
 ## 🚀 실행 방법
 ```bash
