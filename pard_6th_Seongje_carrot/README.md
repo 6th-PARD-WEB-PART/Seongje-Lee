@@ -24,7 +24,7 @@ TailWind 기반으로 **당근마켓 홈페이지**를 제작했습니다.
 ```bash
 # 프로젝트 클론
 git clone https://github.com/6th-PARD-WEB-PART/Seongje-Lee
-cd 3rd-hw
+cd pard_6th_Seongje_carrot
 
 # 개발 서버 실행
 npm run dev

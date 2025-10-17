@@ -1,15 +1,39 @@
 import Link from "next/link";
 import { useState } from "react";
+import { useSearchStore } from "@/store/useSearch";
+import { useRouter } from "next/router";
 
 export default function Home() {
-  const [keyword, setKeyword] = useState("");
+  const router = useRouter();
+  const {keyword, setKeyword} = useSearchStore();
+  const [location, setLocation] = useState("송도동");
+
+  const address = [
+  "송도동",
+  "역삼동",
+  "홍대동",
+  "협실동",
+  "배광동",
+  "서교동",
+  "우정동",
+  "신림동",
+  "광당동",
+  "합정동",
+  "회동동",
+  "다선동",
+  "미금동",
+  "업구장동",
+  "배곡동",
+  "오정동",
+];
 
   const handleSearch = () => {
-    console.log(`{http://localhost:3000/}에서 {${keyword}}을(를) 찾고 있어요!`);
+    console.log(`${location}에서 ${keyword}을(를) 찾고 있어요!`);
+    router.push("/menu");
   };
 
   return (
-    <div className="w-[1440px] mx-auto bg-gray-50 overflow-hidden">
+    <div className="min-h-screen w-full bg-gray-50 overflow-hidden">
       {/* ===== Header ===== */}
       <div className="w-full py-2.5 bg-white border-b border-gray-200 flex justify-center">
         <div className="w-[1200px] h-16 flex items-center">
@@ -18,7 +42,7 @@ export default function Home() {
             <img src="/images/IMG-9.png" alt="로고" className="w-[61px] h-10" />
             <nav className="ml-8 h-6 flex items-center whitespace-nowrap">
               <Link
-                href="/menu"
+                href="/add"
                 className="text-gray-700 text-base font-medium leading-6 hover:text-orange-500 transition"
               >
                 중고거래
@@ -67,7 +91,7 @@ export default function Home() {
           <div className="w-[832px] h-9 mx-auto flex items-center justify-center">
             <img src="/icons/Icon-47.svg" alt="" className="w-8 h-8 mr-2" />
             <h1 className="text-gray-800 text-3xl font-bold leading-9">
-              송도동에서 알바 찾고 계신가요?
+              {location}에서 알바 찾고 계신가요?
             </h1>
           </div>
 
@@ -87,7 +111,7 @@ export default function Home() {
                   alt=""
                   className="w-4 h-4 mr-2 brightness-0 invert transition-transform duration-200 group-hover:scale-110"
                 />
-                <span className="text-sm leading-tight">송도동</span>
+                <span className="text-sm leading-tight">{location}</span>
                 <img
                   src="/icons/Icon-58.svg"
                   alt=""
@@ -121,6 +145,7 @@ export default function Home() {
                     alt=""
                     className="w-4 h-4 brightness-0 invert transition-transform duration-200 group-hover:scale-110"
                   />
+                  
                 </button>
               </div>
             </div>
@@ -162,7 +187,7 @@ export default function Home() {
       </section>
       <section className="w-[1152px] max-w-[1152px] mx-auto p-8">
         <div className="pb-12">
-          <div className="w-[1088px] min-h-32 flex flex-wrap gap-4">
+          <div className="w-[1120px] min-h-32 flex flex-wrap gap-4">
             {[
               "중고거래",
               "알바",
